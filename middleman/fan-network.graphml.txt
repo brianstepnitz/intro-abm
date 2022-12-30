@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns/graphml"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns/graphml">
+<key id="MONEY" for="node" attr.name="MONEY" attr.type="double"/>
+<key id="SELL-PRICE" for="node"/>
+<key id="BUY-STRATEGY-STRING" for="node"/>
+<key id="YCOR" for="node" attr.name="YCOR" attr.type="double"/>
+<key id="HIDDEN?" for="node" attr.name="HIDDEN?" attr.type="boolean"/>
+<key id="XCOR" for="node" attr.name="XCOR" attr.type="double"/>
+<key id="SIZE" for="node" attr.name="SIZE" attr.type="double"/>
+<key id="BUY-PRICE" for="node"/>
+<key id="PRODUCTION-FUNCTION-STRING" for="node" attr.name="PRODUCTION-FUNCTION-STRING" attr.type="string"/>
+<key id="SELL-STRATEGY-STRING" for="node"/>
+<key id="STOCK" for="node" attr.name="STOCK" attr.type="double"/>
+<key id="HEADING" for="node" attr.name="HEADING" attr.type="double"/>
+<key id="SHAPE" for="node" attr.name="SHAPE" attr.type="string"/>
+<key id="LABEL-COLOR" for="node" attr.name="LABEL-COLOR" attr.type="double"/>
+<key id="PEN-SIZE" for="node" attr.name="PEN-SIZE" attr.type="double"/>
+<key id="PEN-MODE" for="node" attr.name="PEN-MODE" attr.type="string"/>
+<key id="COLOR" for="node" attr.name="COLOR" attr.type="double"/>
+<key id="LABEL" for="node" attr.name="LABEL" attr.type="string"/>
+<key id="BREED" for="node" attr.name="BREED" attr.type="string"/>
+<key id="WHO" for="node" attr.name="WHO" attr.type="double"/>
+<key id="INCOME-FUNCTION-STRING" for="node"/>
+<key id="PRICE" for="edge" attr.name="PRICE" attr.type="double"/>
+<key id="HIDDEN?" for="edge" attr.name="HIDDEN?" attr.type="boolean"/>
+<key id="TIE-MODE" for="edge" attr.name="TIE-MODE" attr.type="string"/>
+<key id="ITEMS-TRADED" for="edge" attr.name="ITEMS-TRADED" attr.type="double"/>
+<key id="SHAPE" for="edge" attr.name="SHAPE" attr.type="string"/>
+<key id="LABEL-COLOR" for="edge" attr.name="LABEL-COLOR" attr.type="double"/>
+<key id="END1" for="edge" attr.name="END1" attr.type="string"/>
+<key id="COLOR" for="edge" attr.name="COLOR" attr.type="double"/>
+<key id="END2" for="edge" attr.name="END2" attr.type="string"/>
+<key id="LABEL" for="edge" attr.name="LABEL" attr.type="string"/>
+<key id="BREED" for="edge" attr.name="BREED" attr.type="string"/>
+<key id="MY-LABELER" for="edge" attr.name="MY-LABELER" attr.type="double"/>
+<key id="THICKNESS" for="edge" attr.name="THICKNESS" attr.type="double"/>
+<graph edgedefault="directed">
+<node id="producer 0">
+<data key="MONEY">0</data>
+<data key="YCOR">1</data>
+<data key="HIDDEN?">false</data>
+<data key="XCOR">-14</data>
+<data key="SIZE">1</data>
+<data key="PRODUCTION-FUNCTION-STRING">fixed 10</data>
+<data key="STOCK">0</data>
+<data key="HEADING">47</data>
+<data key="SHAPE">person</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="PEN-SIZE">1</data>
+<data key="PEN-MODE">up</data>
+<data key="COLOR">55</data>
+<data key="LABEL"></data>
+<data key="BREED">producers</data>
+<data key="WHO">0</data>
+</node>
+<node id="agent-labeler 1">
+<data key="MONEY">0</data>
+<data key="YCOR">-0.7320508075688774</data>
+<data key="HIDDEN?">false</data>
+<data key="XCOR">-13</data>
+<data key="SIZE">0</data>
+<data key="STOCK">0</data>
+<data key="HEADING">150</data>
+<data key="SHAPE">person</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="PEN-SIZE">1</data>
+<data key="PEN-MODE">up</data>
+<data key="COLOR">55</data>
+<data key="LABEL">0#</data>
+<data key="BREED">agent-labelers</data>
+<data key="WHO">1</data>
+</node>
+<node id="agent-labeler 2">
+<data key="MONEY">0</data>
+<data key="YCOR">1.8838834764831844</data>
+<data key="HIDDEN?">false</data>
+<data key="XCOR">-13.116116523516816</data>
+<data key="SIZE">0</data>
+<data key="STOCK">0</data>
+<data key="HEADING">45</data>
+<data key="SHAPE">person</data>
+<data key="LABEL-COLOR">95</data>
+<data key="PEN-SIZE">1</data>
+<data key="PEN-MODE">up</data>
+<data key="COLOR">55</data>
+<data key="LABEL">fixed 10</data>
+<data key="BREED">agent-labelers</data>
+<data key="WHO">2</data>
+</node>
+<node id="trader 3">
+<data key="MONEY">100</data>
+<data key="SELL-PRICE">0</data>
+<data key="BUY-STRATEGY-STRING">bid-purchase</data>
+<data key="YCOR">5</data>
+<data key="HIDDEN?">false</data>
+<data key="XCOR">-9</data>
+<data key="SIZE">1</data>
+<data key="BUY-PRICE">0</data>
+<data key="SELL-STRATEGY-STRING">bid-sale</data>
+<data key="STOCK">10</data>
+<data key="HEADING">330</data>
+<data key="SHAPE">person</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="PEN-SIZE">1</data>
+<data key="PEN-MODE">up</data>
+<data key="COLOR">45</data>
+<data key="LABEL"></data>
+<data key="BREED">traders</data>
+<data key="WHO">3</data>
+</node>
+<node id="agent-labeler 4">
+<data key="MONEY">0</data>
+<data key="YCOR">3.267949192431123</data>
+<data key="HIDDEN?">false</data>
+<data key="XCOR">-8</data>
+<data key="SIZE">0</data>
+<data key="STOCK">0</data>
+<data key="HEADING">150</data>
+<data key="SHAPE">person</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="PEN-SIZE">1</data>
+<data key="PEN-MODE">up</data>
+<data key="COLOR">45</data>
+<data key="LABEL">10# $100</data>
+<data key="BREED">agent-labelers</data>
+<data key="WHO">4</data>
+</node>
+<node id="agent-labeler 5">
+<data key="MONEY">0</data>
+<data key="YCOR">5.883883476483184</data>
+<data key="HIDDEN?">false</data>
+<data key="XCOR">-8.116116523516816</data>
+<data key="SIZE">0</data>
+<data key="STOCK">0</data>
+<data key="HEADING">45</data>
+<data key="SHAPE">person</data>
+<data key="LABEL-COLOR">95</data>
+<data key="PEN-SIZE">1</data>
+<data key="PEN-MODE">up</data>
+<data key="COLOR">45</data>
+<data key="LABEL">bid-purchase / bid-sale</data>
+<data key="BREED">agent-labelers</data>
+<data key="WHO">5</data>
+</node>
+<node id="trader 6">
+<data key="MONEY">100</data>
+<data key="SELL-PRICE">0</data>
+<data key="BUY-STRATEGY-STRING">bid-purchase</data>
+<data key="YCOR">-3</data>
+<data key="HIDDEN?">false</data>
+<data key="XCOR">-9</data>
+<data key="SIZE">1</data>
+<data key="BUY-PRICE">0</data>
+<data key="SELL-STRATEGY-STRING">bid-sale</data>
+<data key="STOCK">10</data>
+<data key="HEADING">62</data>
+<data key="SHAPE">person</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="PEN-SIZE">1</data>
+<data key="PEN-MODE">up</data>
+<data key="COLOR">45</data>
+<data key="LABEL"></data>
+<data key="BREED">traders</data>
+<data key="WHO">6</data>
+</node>
+<node id="agent-labeler 7">
+<data key="MONEY">0</data>
+<data key="YCOR">-4.732050807568878</data>
+<data key="HIDDEN?">false</data>
+<data key="XCOR">-8</data>
+<data key="SIZE">0</data>
+<data key="STOCK">0</data>
+<data key="HEADING">150</data>
+<data key="SHAPE">person</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="PEN-SIZE">1</data>
+<data key="PEN-MODE">up</data>
+<data key="COLOR">45</data>
+<data key="LABEL">10# $100</data>
+<data key="BREED">agent-labelers</data>
+<data key="WHO">7</data>
+</node>
+<node id="agent-labeler 8">
+<data key="MONEY">0</data>
+<data key="YCOR">-2.1161165235168156</data>
+<data key="HIDDEN?">false</data>
+<data key="XCOR">-8.116116523516816</data>
+<data key="SIZE">0</data>
+<data key="STOCK">0</data>
+<data key="HEADING">45</data>
+<data key="SHAPE">person</data>
+<data key="LABEL-COLOR">95</data>
+<data key="PEN-SIZE">1</data>
+<data key="PEN-MODE">up</data>
+<data key="COLOR">45</data>
+<data key="LABEL">bid-purchase / bid-sale</data>
+<data key="BREED">agent-labelers</data>
+<data key="WHO">8</data>
+</node>
+<node id="trader 9">
+<data key="MONEY">100</data>
+<data key="SELL-PRICE">0</data>
+<data key="BUY-STRATEGY-STRING">bid-purchase</data>
+<data key="YCOR">11</data>
+<data key="HIDDEN?">false</data>
+<data key="XCOR">-2</data>
+<data key="SIZE">1</data>
+<data key="BUY-PRICE">0</data>
+<data key="SELL-STRATEGY-STRING">bid-sale</data>
+<data key="STOCK">10</data>
+<data key="HEADING">177</data>
+<data key="SHAPE">person</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="PEN-SIZE">1</data>
+<data key="PEN-MODE">up</data>
+<data key="COLOR">45</data>
+<data key="LABEL"></data>
+<data key="BREED">traders</data>
+<data key="WHO">9</data>
+</node>
+<node id="agent-labeler 10">
+<data key="MONEY">0</data>
+<data key="YCOR">9.267949192431121</data>
+<data key="HIDDEN?">false</data>
+<data key="XCOR">-1</data>
+<data key="SIZE">0</data>
+<data key="STOCK">0</data>
+<data key="HEADING">150</data>
+<data key="SHAPE">person</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="PEN-SIZE">1</data>
+<data key="PEN-MODE">up</data>
+<data key="COLOR">45</data>
+<data key="LABEL">10# $100</data>
+<data key="BREED">agent-labelers</data>
+<data key="WHO">10</data>
+</node>
+<node id="agent-labeler 11">
+<data key="MONEY">0</data>
+<data key="YCOR">11.883883476483184</data>
+<data key="HIDDEN?">false</data>
+<data key="XCOR">-1.1161165235168156</data>
+<data key="SIZE">0</data>
+<data key="STOCK">0</data>
+<data key="HEADING">45</data>
+<data key="SHAPE">person</data>
+<data key="LABEL-COLOR">95</data>
+<data key="PEN-SIZE">1</data>
+<data key="PEN-MODE">up</data>
+<data key="COLOR">45</data>
+<data key="LABEL">bid-purchase / bid-sale</data>
+<data key="BREED">agent-labelers</data>
+<data key="WHO">11</data>
+</node>
+<node id="trader 12">
+<data key="MONEY">100</data>
+<data key="SELL-PRICE">0</data>
+<data key="BUY-STRATEGY-STRING">bid-purchase</data>
+<data key="YCOR">1</data>
+<data key="HIDDEN?">false</data>
+<data key="XCOR">-2</data>
+<data key="SIZE">1</data>
+<data key="BUY-PRICE">0</data>
+<data key="SELL-STRATEGY-STRING">bid-sale</data>
+<data key="STOCK">10</data>
+<data key="HEADING">330</data>
+<data key="SHAPE">person</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="PEN-SIZE">1</data>
+<data key="PEN-MODE">up</data>
+<data key="COLOR">45</data>
+<data key="LABEL"></data>
+<data key="BREED">traders</data>
+<data key="WHO">12</data>
+</node>
+<node id="agent-labeler 13">
+<data key="MONEY">0</data>
+<data key="YCOR">-0.7320508075688774</data>
+<data key="HIDDEN?">false</data>
+<data key="XCOR">-1</data>
+<data key="SIZE">0</data>
+<data key="STOCK">0</data>
+<data key="HEADING">150</data>
+<data key="SHAPE">person</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="PEN-SIZE">1</data>
+<data key="PEN-MODE">up</data>
+<data key="COLOR">45</data>
+<data key="LABEL">10# $100</data>
+<data key="BREED">agent-labelers</data>
+<data key="WHO">13</data>
+</node>
+<node id="agent-labeler 14">
+<data key="MONEY">0</data>
+<data key="YCOR">1.8838834764831844</data>
+<data key="HIDDEN?">false</data>
+<data key="XCOR">-1.1161165235168156</data>
+<data key="SIZE">0</data>
+<data key="STOCK">0</data>
+<data key="HEADING">45</data>
+<data key="SHAPE">person</data>
+<data key="LABEL-COLOR">95</data>
+<data key="PEN-SIZE">1</data>
+<data key="PEN-MODE">up</data>
+<data key="COLOR">45</data>
+<data key="LABEL">bid-purchase / bid-sale</data>
+<data key="BREED">agent-labelers</data>
+<data key="WHO">14</data>
+</node>
+<node id="trader 15">
+<data key="MONEY">100</data>
+<data key="SELL-PRICE">0</data>
+<data key="BUY-STRATEGY-STRING">bid-purchase</data>
+<data key="YCOR">-9</data>
+<data key="HIDDEN?">false</data>
+<data key="XCOR">-2</data>
+<data key="SIZE">1</data>
+<data key="BUY-PRICE">0</data>
+<data key="SELL-STRATEGY-STRING">bid-sale</data>
+<data key="STOCK">10</data>
+<data key="HEADING">202</data>
+<data key="SHAPE">person</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="PEN-SIZE">1</data>
+<data key="PEN-MODE">up</data>
+<data key="COLOR">45</data>
+<data key="LABEL"></data>
+<data key="BREED">traders</data>
+<data key="WHO">15</data>
+</node>
+<node id="agent-labeler 16">
+<data key="MONEY">0</data>
+<data key="YCOR">-10.732050807568879</data>
+<data key="HIDDEN?">false</data>
+<data key="XCOR">-1</data>
+<data key="SIZE">0</data>
+<data key="STOCK">0</data>
+<data key="HEADING">150</data>
+<data key="SHAPE">person</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="PEN-SIZE">1</data>
+<data key="PEN-MODE">up</data>
+<data key="COLOR">45</data>
+<data key="LABEL">10# $100</data>
+<data key="BREED">agent-labelers</data>
+<data key="WHO">16</data>
+</node>
+<node id="agent-labeler 17">
+<data key="MONEY">0</data>
+<data key="YCOR">-8.116116523516816</data>
+<data key="HIDDEN?">false</data>
+<data key="XCOR">-1.1161165235168156</data>
+<data key="SIZE">0</data>
+<data key="STOCK">0</data>
+<data key="HEADING">45</data>
+<data key="SHAPE">person</data>
+<data key="LABEL-COLOR">95</data>
+<data key="PEN-SIZE">1</data>
+<data key="PEN-MODE">up</data>
+<data key="COLOR">45</data>
+<data key="LABEL">bid-purchase / bid-sale</data>
+<data key="BREED">agent-labelers</data>
+<data key="WHO">17</data>
+</node>
+<node id="consumer 18">
+<data key="MONEY">100</data>
+<data key="YCOR">1</data>
+<data key="HIDDEN?">false</data>
+<data key="XCOR">10</data>
+<data key="SIZE">1</data>
+<data key="STOCK">0</data>
+<data key="HEADING">21</data>
+<data key="SHAPE">person</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="PEN-SIZE">1</data>
+<data key="PEN-MODE">up</data>
+<data key="COLOR">15</data>
+<data key="LABEL"></data>
+<data key="BREED">consumers</data>
+<data key="WHO">18</data>
+<data key="INCOME-FUNCTION-STRING">fixed 100</data>
+</node>
+<node id="agent-labeler 19">
+<data key="MONEY">0</data>
+<data key="YCOR">-0.7320508075688774</data>
+<data key="HIDDEN?">false</data>
+<data key="XCOR">11</data>
+<data key="SIZE">0</data>
+<data key="STOCK">0</data>
+<data key="HEADING">150</data>
+<data key="SHAPE">person</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="PEN-SIZE">1</data>
+<data key="PEN-MODE">up</data>
+<data key="COLOR">15</data>
+<data key="LABEL">100$</data>
+<data key="BREED">agent-labelers</data>
+<data key="WHO">19</data>
+</node>
+<node id="agent-labeler 20">
+<data key="MONEY">0</data>
+<data key="YCOR">1.8838834764831844</data>
+<data key="HIDDEN?">false</data>
+<data key="XCOR">10.883883476483184</data>
+<data key="SIZE">0</data>
+<data key="STOCK">0</data>
+<data key="HEADING">45</data>
+<data key="SHAPE">person</data>
+<data key="LABEL-COLOR">95</data>
+<data key="PEN-SIZE">1</data>
+<data key="PEN-MODE">up</data>
+<data key="COLOR">15</data>
+<data key="LABEL">fixed 100</data>
+<data key="BREED">agent-labelers</data>
+<data key="WHO">20</data>
+</node>
+<edge source="producer 0" target="agent-labeler 1">
+<data key="PRICE">0</data>
+<data key="HIDDEN?">true</data>
+<data key="TIE-MODE">fixed</data>
+<data key="ITEMS-TRADED">0</data>
+<data key="SHAPE">default</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="END1">(producer 0)</data>
+<data key="COLOR">5</data>
+<data key="END2">(agent-labeler 1)</data>
+<data key="LABEL"></data>
+<data key="BREED">inventory-label-links</data>
+<data key="MY-LABELER">0</data>
+<data key="THICKNESS">0</data>
+</edge>
+<edge source="producer 0" target="agent-labeler 2">
+<data key="PRICE">0</data>
+<data key="HIDDEN?">true</data>
+<data key="TIE-MODE">fixed</data>
+<data key="ITEMS-TRADED">0</data>
+<data key="SHAPE">default</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="END1">(producer 0)</data>
+<data key="COLOR">5</data>
+<data key="END2">(agent-labeler 2)</data>
+<data key="LABEL"></data>
+<data key="BREED">strategy-label-links</data>
+<data key="MY-LABELER">0</data>
+<data key="THICKNESS">0</data>
+</edge>
+<edge source="producer 0" target="trader 3">
+<data key="PRICE">0</data>
+<data key="HIDDEN?">false</data>
+<data key="TIE-MODE">none</data>
+<data key="ITEMS-TRADED">0</data>
+<data key="SHAPE">default</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="END1">(producer 0)</data>
+<data key="COLOR">115</data>
+<data key="END2">(trader 3)</data>
+<data key="LABEL"></data>
+<data key="BREED">purchase-orders</data>
+<data key="MY-LABELER">0</data>
+<data key="THICKNESS">0</data>
+</edge>
+<edge source="producer 0" target="trader 6">
+<data key="PRICE">0</data>
+<data key="HIDDEN?">false</data>
+<data key="TIE-MODE">none</data>
+<data key="ITEMS-TRADED">0</data>
+<data key="SHAPE">default</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="END1">(producer 0)</data>
+<data key="COLOR">115</data>
+<data key="END2">(trader 6)</data>
+<data key="LABEL"></data>
+<data key="BREED">purchase-orders</data>
+<data key="MY-LABELER">0</data>
+<data key="THICKNESS">0</data>
+</edge>
+<edge source="trader 3" target="agent-labeler 4">
+<data key="PRICE">0</data>
+<data key="HIDDEN?">true</data>
+<data key="TIE-MODE">fixed</data>
+<data key="ITEMS-TRADED">0</data>
+<data key="SHAPE">default</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="END1">(trader 3)</data>
+<data key="COLOR">5</data>
+<data key="END2">(agent-labeler 4)</data>
+<data key="LABEL"></data>
+<data key="BREED">inventory-label-links</data>
+<data key="MY-LABELER">0</data>
+<data key="THICKNESS">0</data>
+</edge>
+<edge source="trader 3" target="agent-labeler 5">
+<data key="PRICE">0</data>
+<data key="HIDDEN?">true</data>
+<data key="TIE-MODE">fixed</data>
+<data key="ITEMS-TRADED">0</data>
+<data key="SHAPE">default</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="END1">(trader 3)</data>
+<data key="COLOR">5</data>
+<data key="END2">(agent-labeler 5)</data>
+<data key="LABEL"></data>
+<data key="BREED">strategy-label-links</data>
+<data key="MY-LABELER">0</data>
+<data key="THICKNESS">0</data>
+</edge>
+<edge source="trader 3" target="trader 9">
+<data key="PRICE">0</data>
+<data key="HIDDEN?">false</data>
+<data key="TIE-MODE">none</data>
+<data key="ITEMS-TRADED">0</data>
+<data key="SHAPE">default</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="END1">(trader 3)</data>
+<data key="COLOR">115</data>
+<data key="END2">(trader 9)</data>
+<data key="LABEL"></data>
+<data key="BREED">purchase-orders</data>
+<data key="MY-LABELER">0</data>
+<data key="THICKNESS">0</data>
+</edge>
+<edge source="trader 3" target="trader 12">
+<data key="PRICE">0</data>
+<data key="HIDDEN?">false</data>
+<data key="TIE-MODE">none</data>
+<data key="ITEMS-TRADED">0</data>
+<data key="SHAPE">default</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="END1">(trader 3)</data>
+<data key="COLOR">115</data>
+<data key="END2">(trader 12)</data>
+<data key="LABEL"></data>
+<data key="BREED">purchase-orders</data>
+<data key="MY-LABELER">0</data>
+<data key="THICKNESS">0</data>
+</edge>
+<edge source="trader 6" target="agent-labeler 7">
+<data key="PRICE">0</data>
+<data key="HIDDEN?">true</data>
+<data key="TIE-MODE">fixed</data>
+<data key="ITEMS-TRADED">0</data>
+<data key="SHAPE">default</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="END1">(trader 6)</data>
+<data key="COLOR">5</data>
+<data key="END2">(agent-labeler 7)</data>
+<data key="LABEL"></data>
+<data key="BREED">inventory-label-links</data>
+<data key="MY-LABELER">0</data>
+<data key="THICKNESS">0</data>
+</edge>
+<edge source="trader 6" target="agent-labeler 8">
+<data key="PRICE">0</data>
+<data key="HIDDEN?">true</data>
+<data key="TIE-MODE">fixed</data>
+<data key="ITEMS-TRADED">0</data>
+<data key="SHAPE">default</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="END1">(trader 6)</data>
+<data key="COLOR">5</data>
+<data key="END2">(agent-labeler 8)</data>
+<data key="LABEL"></data>
+<data key="BREED">strategy-label-links</data>
+<data key="MY-LABELER">0</data>
+<data key="THICKNESS">0</data>
+</edge>
+<edge source="trader 6" target="trader 12">
+<data key="PRICE">0</data>
+<data key="HIDDEN?">false</data>
+<data key="TIE-MODE">none</data>
+<data key="ITEMS-TRADED">0</data>
+<data key="SHAPE">default</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="END1">(trader 6)</data>
+<data key="COLOR">115</data>
+<data key="END2">(trader 12)</data>
+<data key="LABEL"></data>
+<data key="BREED">purchase-orders</data>
+<data key="MY-LABELER">0</data>
+<data key="THICKNESS">0</data>
+</edge>
+<edge source="trader 6" target="trader 15">
+<data key="PRICE">0</data>
+<data key="HIDDEN?">false</data>
+<data key="TIE-MODE">none</data>
+<data key="ITEMS-TRADED">0</data>
+<data key="SHAPE">default</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="END1">(trader 6)</data>
+<data key="COLOR">115</data>
+<data key="END2">(trader 15)</data>
+<data key="LABEL"></data>
+<data key="BREED">purchase-orders</data>
+<data key="MY-LABELER">0</data>
+<data key="THICKNESS">0</data>
+</edge>
+<edge source="trader 9" target="trader 3">
+<data key="PRICE">0</data>
+<data key="HIDDEN?">false</data>
+<data key="TIE-MODE">none</data>
+<data key="ITEMS-TRADED">0</data>
+<data key="SHAPE">default</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="END1">(trader 9)</data>
+<data key="COLOR">25</data>
+<data key="END2">(trader 3)</data>
+<data key="LABEL"></data>
+<data key="BREED">sale-orders</data>
+<data key="MY-LABELER">0</data>
+<data key="THICKNESS">0</data>
+</edge>
+<edge source="trader 9" target="agent-labeler 10">
+<data key="PRICE">0</data>
+<data key="HIDDEN?">true</data>
+<data key="TIE-MODE">fixed</data>
+<data key="ITEMS-TRADED">0</data>
+<data key="SHAPE">default</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="END1">(trader 9)</data>
+<data key="COLOR">5</data>
+<data key="END2">(agent-labeler 10)</data>
+<data key="LABEL"></data>
+<data key="BREED">inventory-label-links</data>
+<data key="MY-LABELER">0</data>
+<data key="THICKNESS">0</data>
+</edge>
+<edge source="trader 9" target="agent-labeler 11">
+<data key="PRICE">0</data>
+<data key="HIDDEN?">true</data>
+<data key="TIE-MODE">fixed</data>
+<data key="ITEMS-TRADED">0</data>
+<data key="SHAPE">default</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="END1">(trader 9)</data>
+<data key="COLOR">5</data>
+<data key="END2">(agent-labeler 11)</data>
+<data key="LABEL"></data>
+<data key="BREED">strategy-label-links</data>
+<data key="MY-LABELER">0</data>
+<data key="THICKNESS">0</data>
+</edge>
+<edge source="trader 12" target="trader 3">
+<data key="PRICE">0</data>
+<data key="HIDDEN?">false</data>
+<data key="TIE-MODE">none</data>
+<data key="ITEMS-TRADED">0</data>
+<data key="SHAPE">default</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="END1">(trader 12)</data>
+<data key="COLOR">25</data>
+<data key="END2">(trader 3)</data>
+<data key="LABEL"></data>
+<data key="BREED">sale-orders</data>
+<data key="MY-LABELER">0</data>
+<data key="THICKNESS">0</data>
+</edge>
+<edge source="trader 12" target="trader 6">
+<data key="PRICE">0</data>
+<data key="HIDDEN?">false</data>
+<data key="TIE-MODE">none</data>
+<data key="ITEMS-TRADED">0</data>
+<data key="SHAPE">default</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="END1">(trader 12)</data>
+<data key="COLOR">25</data>
+<data key="END2">(trader 6)</data>
+<data key="LABEL"></data>
+<data key="BREED">sale-orders</data>
+<data key="MY-LABELER">0</data>
+<data key="THICKNESS">0</data>
+</edge>
+<edge source="trader 12" target="agent-labeler 13">
+<data key="PRICE">0</data>
+<data key="HIDDEN?">true</data>
+<data key="TIE-MODE">fixed</data>
+<data key="ITEMS-TRADED">0</data>
+<data key="SHAPE">default</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="END1">(trader 12)</data>
+<data key="COLOR">5</data>
+<data key="END2">(agent-labeler 13)</data>
+<data key="LABEL"></data>
+<data key="BREED">inventory-label-links</data>
+<data key="MY-LABELER">0</data>
+<data key="THICKNESS">0</data>
+</edge>
+<edge source="trader 12" target="agent-labeler 14">
+<data key="PRICE">0</data>
+<data key="HIDDEN?">true</data>
+<data key="TIE-MODE">fixed</data>
+<data key="ITEMS-TRADED">0</data>
+<data key="SHAPE">default</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="END1">(trader 12)</data>
+<data key="COLOR">5</data>
+<data key="END2">(agent-labeler 14)</data>
+<data key="LABEL"></data>
+<data key="BREED">strategy-label-links</data>
+<data key="MY-LABELER">0</data>
+<data key="THICKNESS">0</data>
+</edge>
+<edge source="trader 15" target="trader 6">
+<data key="PRICE">0</data>
+<data key="HIDDEN?">false</data>
+<data key="TIE-MODE">none</data>
+<data key="ITEMS-TRADED">0</data>
+<data key="SHAPE">default</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="END1">(trader 15)</data>
+<data key="COLOR">25</data>
+<data key="END2">(trader 6)</data>
+<data key="LABEL"></data>
+<data key="BREED">sale-orders</data>
+<data key="MY-LABELER">0</data>
+<data key="THICKNESS">0</data>
+</edge>
+<edge source="trader 15" target="agent-labeler 16">
+<data key="PRICE">0</data>
+<data key="HIDDEN?">true</data>
+<data key="TIE-MODE">fixed</data>
+<data key="ITEMS-TRADED">0</data>
+<data key="SHAPE">default</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="END1">(trader 15)</data>
+<data key="COLOR">5</data>
+<data key="END2">(agent-labeler 16)</data>
+<data key="LABEL"></data>
+<data key="BREED">inventory-label-links</data>
+<data key="MY-LABELER">0</data>
+<data key="THICKNESS">0</data>
+</edge>
+<edge source="trader 15" target="agent-labeler 17">
+<data key="PRICE">0</data>
+<data key="HIDDEN?">true</data>
+<data key="TIE-MODE">fixed</data>
+<data key="ITEMS-TRADED">0</data>
+<data key="SHAPE">default</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="END1">(trader 15)</data>
+<data key="COLOR">5</data>
+<data key="END2">(agent-labeler 17)</data>
+<data key="LABEL"></data>
+<data key="BREED">strategy-label-links</data>
+<data key="MY-LABELER">0</data>
+<data key="THICKNESS">0</data>
+</edge>
+<edge source="consumer 18" target="trader 9">
+<data key="PRICE">0</data>
+<data key="HIDDEN?">false</data>
+<data key="TIE-MODE">none</data>
+<data key="ITEMS-TRADED">0</data>
+<data key="SHAPE">default</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="END1">(consumer 18)</data>
+<data key="COLOR">25</data>
+<data key="END2">(trader 9)</data>
+<data key="LABEL"></data>
+<data key="BREED">sale-orders</data>
+<data key="MY-LABELER">0</data>
+<data key="THICKNESS">0</data>
+</edge>
+<edge source="consumer 18" target="trader 12">
+<data key="PRICE">0</data>
+<data key="HIDDEN?">false</data>
+<data key="TIE-MODE">none</data>
+<data key="ITEMS-TRADED">0</data>
+<data key="SHAPE">default</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="END1">(consumer 18)</data>
+<data key="COLOR">25</data>
+<data key="END2">(trader 12)</data>
+<data key="LABEL"></data>
+<data key="BREED">sale-orders</data>
+<data key="MY-LABELER">0</data>
+<data key="THICKNESS">0</data>
+</edge>
+<edge source="consumer 18" target="trader 15">
+<data key="PRICE">0</data>
+<data key="HIDDEN?">false</data>
+<data key="TIE-MODE">none</data>
+<data key="ITEMS-TRADED">0</data>
+<data key="SHAPE">default</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="END1">(consumer 18)</data>
+<data key="COLOR">25</data>
+<data key="END2">(trader 15)</data>
+<data key="LABEL"></data>
+<data key="BREED">sale-orders</data>
+<data key="MY-LABELER">0</data>
+<data key="THICKNESS">0</data>
+</edge>
+<edge source="consumer 18" target="agent-labeler 19">
+<data key="PRICE">0</data>
+<data key="HIDDEN?">true</data>
+<data key="TIE-MODE">fixed</data>
+<data key="ITEMS-TRADED">0</data>
+<data key="SHAPE">default</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="END1">(consumer 18)</data>
+<data key="COLOR">5</data>
+<data key="END2">(agent-labeler 19)</data>
+<data key="LABEL"></data>
+<data key="BREED">inventory-label-links</data>
+<data key="MY-LABELER">0</data>
+<data key="THICKNESS">0</data>
+</edge>
+<edge source="consumer 18" target="agent-labeler 20">
+<data key="PRICE">0</data>
+<data key="HIDDEN?">true</data>
+<data key="TIE-MODE">fixed</data>
+<data key="ITEMS-TRADED">0</data>
+<data key="SHAPE">default</data>
+<data key="LABEL-COLOR">9.9</data>
+<data key="END1">(consumer 18)</data>
+<data key="COLOR">5</data>
+<data key="END2">(agent-labeler 20)</data>
+<data key="LABEL"></data>
+<data key="BREED">strategy-label-links</data>
+<data key="MY-LABELER">0</data>
+<data key="THICKNESS">0</data>
+</edge>
+</graph>
+</graphml>

@@ -1,0 +1,302 @@
+globals [
+  default-trader-money
+  default-trader-stock
+  default-production-function
+  default-buy-strategy
+  default-sell-strategy
+  default-income-function
+  
+  world-mode
+  hide-titles?
+  titlers
+]
+
+;; All turtles have a stock of items and an amount of money.
+turtles-own [
+  stock
+  money
+]
+
+breed [agent-labelers agent-labeler]
+
+breed [producers producer]
+producers-own [
+  production-function-string
+]
+
+breed [traders trader]
+traders-own [
+  buy-price
+  sell-price
+  buy-strategy-string
+  sell-strategy-string
+]
+
+breed [consumers consumer]
+consumers-own [
+  income-function-string
+]
+
+directed-link-breed [purchase-orders purchase-order]
+directed-link-breed [sale-orders sale-order]
+
+directed-link-breed [inventory-label-links inventory-label-link]
+directed-link-breed [strategy-label-links strategy-label-link]
+
+links-own [
+  items-traded
+  price
+  my-labeler
+]
+
+;;;;;;;;;;;;;;;;;;;;
+;; Agent strategies.
+;;;;;;;;;;;;;;;;;;;;
+
+;; Always report the same value.
+to-report fixed [ the-value ]
+  report the-value
+end
+
+;; If the trader failed to buy any items last tick, raise its price by 1 or its current money amount, whichever is lower.
+;; Else lower its price down by 1 or to $1, whichever is higher.
+to-report bid-purchase
+  report (ifelse-value
+    (sum [items-traded] of my-in-purchase-orders) = 0 [ min (list money (buy-price + 1)) ]
+    [ max (list 1 (buy-price - 1)) ]
+  )
+end
+
+;; If the trader failed to sell any items last tick, lower its price by 1 or to $1, whichever is higher.
+;; Else raise its price by $1.
+to-report bid-sale
+  report (ifelse-value
+    (sum [items-traded] of my-in-sale-orders) = 0 [ max (list 1 (sell-price - 1)) ]
+    [ sell-price + 1 ]
+  )
+end
+
+;;;;;;;;;
+;; Setup.
+;;;;;;;;;
+
+to startup
+  setup
+end
+
+to setup
+  clear-ticks
+  clear-all
+
+  set default-production-function "fixed 10"
+  set default-buy-strategy "bid-purchase"
+  set default-sell-strategy "bid-sale"
+  set default-income-function "fixed 100"
+  set default-trader-money 100
+  set default-trader-stock 10
+
+  set-default-shape turtles "person"
+  
+  set world-mode ""
+  set hide-titles? false
+  set titlers (patch-set (patch 0 max-pycor) (patch 0 min-pycor))
+end
+
+to make-network-layered [ num-producers num-traders-per-layer num-layers num-consumers ]
+  let y min-pycor
+  
+  let x (min-pxcor + world-width / (num-layers + 3))
+  create-producers num-producers [
+    set y (y + world-height / (num-producers + 1))
+    setxy x y
+    
+    init-producer 0 default-production-function
+  ]
+  
+  repeat num-layers [
+    set x (x + world-width / (num-layers + 3))
+    set y min-pycor
+    
+    create-traders num-traders-per-layer [
+      set y (y + world-height / (num-traders-per-layer + 1))
+      setxy x y
+      
+      init-trader default-trader-stock default-trader-money default-buy-strategy default-sell-strategy
+    ]
+  ]
+  
+  set x (x + world-width / (num-layers + 3))
+  set y min-pycor
+  create-consumers num-consumers [
+    set y (y + world-height / (num-consumers + 1))
+    setxy x y
+    
+    init-consumer 0 default-income-function
+  ]
+  
+  ask producers [
+    create-purchase-orders-to traders with-min [xcor] [ init-purchase-order ]
+  ]
+  ask traders with [xcor < max [xcor] of traders] [
+    create-purchase-orders-to traders with [xcor = [xcor] of myself + (world-width / (num-layers + 3))] [
+      init-purchase-order
+    ]
+  ]
+  ask traders with [xcor > min [xcor] of traders] [
+    create-sale-orders-to traders with [xcor = [xcor] of myself - (world-width / (num-layers + 3))] [
+      init-sale-order
+    ]
+  ]
+  ask consumers [
+    create-sale-orders-to traders with-max [xcor] [ init-sale-order ]
+  ]
+end
+
+;;;;;;;;;;;;;;;;
+;; Initializers.
+;;;;;;;;;;;;;;;;
+
+to init-producer [ the-stock the-production-function-string ]
+  set color green
+  set stock the-stock
+  set production-function-string the-production-function-string
+  attach-this-agent-labels
+end
+
+to init-trader [ the-stock the-money the-buystrategy-string the-sellstrategy-string ]
+  set color yellow
+  set stock the-stock
+  set money the-money
+  set buy-strategy-string the-buystrategy-string
+  set sell-strategy-string the-sellstrategy-string
+  attach-this-agent-labels
+end
+
+to init-consumer [ the-money the-income-function-string ]
+  set color red
+  set money the-money
+  set income-function-string the-income-function-string
+  attach-this-agent-labels
+end
+
+to init-purchase-order
+  set color violet
+end
+
+to init-sale-order
+  set color orange
+end
+
+;;;;;;;;;;;;;;;
+;; Draw labels.
+;;;;;;;;;;;;;;;
+
+;; Update the title of the world.
+to set-world-mode [ mode-string mode-color ]
+  
+  set world-mode mode-string
+
+  ask titlers [
+    set plabel-color mode-color
+    set plabel world-mode
+  ]
+end
+
+;; Report a string representation of the inventory label.
+to-report inventory-label-string
+  report (ifelse-value
+    is-producer? myself [word [stock] of myself "#"]
+    is-trader? myself [(word [stock] of myself "# $" [money] of myself)]
+    is-consumer? myself [word [money] of myself "$"]
+  )
+end
+
+;; Report a string representation of the strategy label.
+to-report strategy-label-string
+  (ifelse
+    is-producer? myself [
+      report [production-function-string] of myself
+    ]
+
+    is-trader? myself [
+      report (word [buy-strategy-string] of myself " / " [sell-strategy-string] of myself)
+    ]
+
+    is-consumer? myself [
+      report [income-function-string] of myself
+    ]
+  )
+end
+
+;; Report a string representation of the order label.
+to-report order-label-string
+  let money-traded [items-traded] of myself * [price] of myself
+  report (word [items-traded] of myself "# x $" [price] of myself " = $" money-traded)
+end
+
+;; Attach labels to a new agent.
+to attach-this-agent-labels
+
+  ;; Attach an inventory label.
+  hatch-agent-labelers 1 [
+    set size 0
+    set heading 150
+    forward 2
+    set label inventory-label-string
+    create-inventory-label-link-from myself [
+      hide-link
+      tie
+    ]
+  ]
+
+  ;; Attach a strategy label.
+  hatch-agent-labelers 1 [
+    set size 0
+    set heading 45
+    forward 1.25
+    set label-color sky
+    set label strategy-label-string
+    create-strategy-label-link-from myself [
+      hide-link
+      tie
+    ]
+  ]
+end
+
+;; Update labels for an agent.
+to update-this-agent-labels
+  ask out-inventory-label-link-neighbors [
+    set label inventory-label-string
+  ]
+
+  ask out-strategy-label-link-neighbors [
+    set label strategy-label-string
+  ]
+end
+
+;; Toggle whether titles are visible.
+to toggle-titles
+  set hide-titles? not hide-titles?
+  
+  ask titlers [
+    ifelse hide-titles? [
+      set plabel ""
+    ] [
+      set plabel world-mode
+    ]
+  ]
+end
+
+;; Toggle whether agent inventory labels are visible.
+to toggle-inventory-labels
+  ask inventory-label-links [
+    ask end2 [ set hidden? not hidden? ]
+  ]
+end
+
+;; Toggle whether agent strategy labels are visible.
+to toggle-strategy-labels
+  ask strategy-label-links [
+    ask end2 [ set hidden? not hidden? ]
+  ]
+end
